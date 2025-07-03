@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>System Backup – Final Mission</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background: #0d1117;
+      color: #c9d1d9;
+      text-align: center;
+      padding: 60px;
+    }
+    .puzzle {
+      margin-top: 40px;
+      font-size: 1.2em;
+    }
+    #flag {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #33ff33;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #58a6ff;
+      border: none;
+      color: black;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+    button:hover {
+      background-color: #79c0ff;
+    }
+  </style>
+  <script>
+    function revealFlag() {
+      const answer = prompt("Decrypt this Vigenère Cipher: \n\nUTUZC JWPCP YMNX NX FSI RFPNSL\n\nHint: keyword is 'security'");
+      const correctAnswer = "there exists time to think";
+      if (answer.toLowerCase().trim() === correctAnswer) {
+        document.getElementById("flag").innerText = "FLAG{R3C0V3RY_KEY_UNL0CK3D}";
+      } else {
+        alert("🛑 Incorrect decryption. Try again, Agent.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>🔐 Final Mission: Cipher Puzzle</h1>
+  <p class="puzzle">To access the backup vault, decrypt the message below.</p>
+  <div class="puzzle">
+    <code>UTUZC JWPCP YMNX NX FSI RFPNSL</code><br>
+    <small>Hint: It's encrypted with Vigenère Cipher. Keyword = <b>security</b></small>
+  </div>
+  <button onclick="revealFlag()">🧠 Submit Decryption</button>
+  <p id="flag"></p>
+</body>
+</html>

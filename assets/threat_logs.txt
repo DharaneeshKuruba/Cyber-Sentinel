@@ -1,0 +1,10 @@
+[INFO] 10.0.0.1 - LOGIN success for user:admin
+[WARN] Repeated login failures from 192.168.1.99
+[ALERT] Suspicious file downloaded at /tmp/xrunner.sh
+[DEBUG] System executing binary signature: DUMP-xFG72A
+[TRACE] xFG72A matched known malware pattern (ThreatLevel=HIGH)
+[SYS] Emergency mode triggered
+[NOTE] Refer to string starting at x and ending at A in above line → ?
+[DEBUG] Flag is not here lol
+[THREAT] Dummy flag: FLAG{FAKE_FLAG_TRAP}
+[HINT] True flag only appears once, in binary match line.
